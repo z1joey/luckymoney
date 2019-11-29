@@ -2,10 +2,7 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * RestController = Controller + ResponseBody
@@ -23,9 +20,15 @@ public class HelloController {
      *
      * request by get or post
      * RequestMapping("/say")
+     *
+     * http://localhost:8081/luckymoney/hello/say?id=100
+     * RequestParam("id")
+     *
+     * http://localhost:8081/luckymoney/hello/say/100
+     * PathVariable("id")
      */
-    @GetMapping("/say")
-    public String say() {
-        return limitConfig.getDescription();
+    @GetMapping("/say/{id}")
+    public String say(@RequestParam(value = "id", required = false, defaultValue = "100") Integer id) {
+        return id + limitConfig.getDescription();
     }
 }
