@@ -18,8 +18,11 @@ public class HelloController {
     private LimitConfig limitConfig;
 
     /**
-     * either /hello or /hi
+     * path ended with /hello or /hi
      * GetMapping({"/hello", "/hi"})
+     *
+     * request by get or post
+     * RequestMapping("/say")
      */
     @GetMapping("/say")
     public String say() {
