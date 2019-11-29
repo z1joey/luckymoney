@@ -16,7 +16,7 @@ public class HelloController2 {
 
     @GetMapping("/hello1")
     @ResponseBody
-    public String say() {
+    public String say1() {
         return limitConfig.getDescription();
     }
 

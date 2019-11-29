@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,11 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @author joey
  */
 @RestController
+@RequestMapping("/hello")
 public class HelloController {
     @Autowired
     private LimitConfig limitConfig;
 
-    @GetMapping("/hello")
+    /**
+     * either /hello or /hi
+     * GetMapping({"/hello", "/hi"})
+     */
+    @GetMapping("/say")
     public String say() {
         return limitConfig.getDescription();
     }
