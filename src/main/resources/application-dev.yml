@@ -8,3 +8,14 @@ limit:
   minMoney: 0.01
   maxMoney: 999
   description: The minimum amount is ${limit.minMoney}, while the maxism amount is ${limit.maxMoney}
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/luckymoney
+    username: root
+    password: mysql123
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true

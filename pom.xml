@@ -41,6 +41,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		<!--	Controller + Template    -->
 
 		<!--	Database support    -->
 		<dependency>
@@ -52,6 +53,7 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+		<!--	Database support    -->
 	</dependencies>
 
 	<build>
