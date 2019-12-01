@@ -12,8 +12,8 @@ limit:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # ?characterEncoding=utf-8, add to url to fix coding issue （confirmed not working）
-    url: jdbc:mysql://localhost:3306/luckymoney
+    # ?characterEncoding=utf-8, fix encoding issue
+    url: jdbc:mysql://localhost:3306/luckymoney?characterEncoding=utf-8
     username: root
     password: mysql123
   jpa:
