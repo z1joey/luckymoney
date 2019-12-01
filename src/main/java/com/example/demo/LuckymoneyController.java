@@ -43,11 +43,8 @@ public class LuckymoneyController {
 
     /**
      * Update a luckmoney
-     * Put and Get might not share the same path (unconfirmed)
-     * If the Id is not given, will generate a new one
-     * The following update is actually create a new item with the same id
      */
-    @PutMapping("/update/{id}")
+    @PutMapping("/luckymoneys/{id}")
     public Luckymoney update(@PathVariable("id") Integer id,
                              @RequestParam("consumer") String consumer) {
 
