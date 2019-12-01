@@ -17,5 +17,6 @@ spring:
     password: mysql123
   jpa:
     hibernate:
-      ddl-auto: create
+      # ddl-auto: create -> override
+      ddl-auto: update
     show-sql: true
